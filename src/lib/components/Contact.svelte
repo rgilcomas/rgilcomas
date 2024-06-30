@@ -8,7 +8,7 @@
 <div class="col align-start contacta-panel">
     <h3>CONTACTA CON NOSOTROS</h3>
     
-    <div class="row">
+    <div class="dyn-row align-start">
         <div class="col align-start">
             <a class="row" href="tel:+34934909722">
                 <PhoneIcon />934909722
@@ -18,7 +18,7 @@
             </a>
         </div>
     
-        <div class="col align-start contacta-panel">
+        <div class="col align-start">
             <div class="row">
                 <ClockIcon />
                 Lunes - Viernes
@@ -42,5 +42,15 @@
     }
     a {
         color: #8ccdff;
+    }
+    
+    .dyn-row {
+        gap: 40px;
+    }
+    @media (max-width:700px)  {
+        .dyn-row {
+            gap:0px;
+            flex-direction: column;
+        }
     }
 </style>

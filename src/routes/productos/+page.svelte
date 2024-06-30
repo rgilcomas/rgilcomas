@@ -23,7 +23,7 @@ Pero ¿Sabes lo que hay que tener en cuenta a la hora de elegir tus recambios? M
 
 
 <div class="col stretch" style="background:#1e6193">
-    <div class="row img-container">
+    <div class="dyn-row img-container">
     <img src={imgA} alt=""/>
     <div class="col align-start">
         <h2>No dejes que te engañen por ahí</h2>
@@ -32,7 +32,7 @@ Pero ¿Sabes lo que hay que tener en cuenta a la hora de elegir tus recambios? M
     </div>
 </div>
 <div class="col stretch" style="background:#246c61">
-    <div class="row img-container">
+    <div class="dyn-row img-container">
     <div class="col align-start">
         <h2>Siente la seguridad de comprar un recambio de calidad</h2>
         <p>En Gil Comas vas a poder encontrar recambios para todas las marcas de coches y motos. Queremos mostrarte nuestra extensa gama de piezas de repuesto, neumáticos, bombillas, aceites de motor, productos de limpieza, herramientas y accesorios para tu vehículo. Para que puedas elegir con nuestra ayuda lo que más te convenga en cada momento.</p>
@@ -41,7 +41,7 @@ Pero ¿Sabes lo que hay que tener en cuenta a la hora de elegir tus recambios? M
     </div>
 </div>
 <div class="col stretch" style="background:#80e0d5;color:#246c61">
-    <div class="row img-container">
+    <div class="dyn-row img-container">
     <img src={imgC} alt=""/>
     <div class="col align-start">
         <h2>Con nosotros tendrás acceso a las mejores opciones del mercado de recambios:</h2>
@@ -68,14 +68,25 @@ Pero ¿Sabes lo que hay que tener en cuenta a la hora de elegir tus recambios? M
 <Contact/>
   
 <style>
+
     img {
       height: 200px;
-      width: 400px;
+      width: min(400px, 30%);
       object-fit: cover;
       flex-shrink: 0;
       border-radius: 40px;
       box-shadow: #fff 0 0 10px, #fff 0 0 5px;
     }
+
+    @media (max-width:700px)  {
+        img {
+            width: min(400px, 90%);
+        }
+        .dyn-row {
+            flex-direction: column;
+        }
+    }
+
     .img-container {
         max-width: 1300px;
         gap: 60px;

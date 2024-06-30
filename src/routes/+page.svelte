@@ -67,7 +67,7 @@
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
-    padding: 120px;
+    padding: min(120px, 10%);
     text-shadow: #000 0px 0 20px, #000 0px 0 20px, #000 0px 0 30px, #000 0px 0 30px;
   }
   
